@@ -1,23 +1,36 @@
 package edu.grinnell.csc207.nikakath.utils;
 
+import java.lang.reflect.Array;
+
 public class StringUtils {
 
 	public static void main(String[] args) throws Exception {
 
 		java.io.PrintWriter pen;
 		pen = new java.io.PrintWriter(System.out, true);
+		
+		String[] test = splitAt("a:b:c", ':');
+		int i;
+		for (i = 0; i < Array.getLength(test); i++){
+			pen.println(test[i]);
+		}
+		
 		String name = "Shirley";
 		nameGame(name);
 		
 	}
 
 	public static String[] splitAt(String str, char ch) {
-		int i;
+		int i, j, k;
+		k = 0;
+		j = 0;
 		String[] split = new String[str.length()];
 		
 		for (i = 0; i <= str.length(); i++){
 			if (str.charAt(i) != ch){
-				
+				split[k] = str.substring(i, j);
+				k++;
+				j = i;
 				} //if
 			
 			} //for
@@ -27,17 +40,6 @@ public class StringUtils {
 	} //splitAt
 	
 	public static String[] splitCVS(String str, char ch) {
-		int i;
-		String[] split = new String[str.length()];
-		
-		for (i = 0; i <= str.length(); i++){
-			if (str.charAt(i) != ch){
-				
-				} //if
-			
-			} //for
-		
-		return split;
 		
 	} //splitCVS
 	
