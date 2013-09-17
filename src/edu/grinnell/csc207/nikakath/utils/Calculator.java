@@ -43,7 +43,7 @@ public class Calculator {
 	 * Preconditions: No additional.
 	 * Postconditions: Returns an array of integers, the values representing the number of each coin required 
 	 * to make the necessary change, so that fewest[0] is the number of wots needed, fewest[1] is the
-	 * number of eaters, etc.
+	 * number of eaters, etc. (Incomplete)
 	 */
 	
 	public static int[] fewestCoins(int i) {
